@@ -6,7 +6,7 @@ current_SOC=battery_paramaters(6);
 %%% charging
 if Current_week_actual_load_data_reshape < CT 
     ESS_schedule= CT - Current_week_actual_load_data_reshape ;
-    current_SOC=current_SOC+battery_paramaters(3)*time_slot_duration*ESS_schedule ;
+    current_SOC=current_SOC+battery_paramaters(3)*time_slot_duration*ESS_schedule ;% seems the problem is here and with ESS_schedule
 else
     %%%discharging
     ESS_schedule = Current_week_actual_load_data_reshape - DCT ;

@@ -14,7 +14,7 @@ for Week_number=Assigned_week_numbers
 
     [Current_week_actual_load_data,Current_week_predictions,Current_week_forecast_time_stamppp]=obtain_current_week_data_dt(Week_number,Weekly_time_stamps,load_time_stamp,load_value);
 
-    Current_week_actual_load_data_reshape=arrayfun(@(x){repmat(x,95,1)},Current_week_actual_load_data(:,1))
+    Current_week_actual_load_data_reshape=arrayfun(@(x){repmat(x,95,1)},Current_week_actual_load_data(:,1));
 
     ESS_estimated_schedule=cell(length(current_week_time_stamps),1);
     ESS_real_time_schedule=cell(length(current_week_time_stamps),1);
